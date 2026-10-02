@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revise SDK examples</title>
+    <style>
+      :root { --bg: #fff; --fg: #1c1c1e; --muted: #6b6b70; --line: #e4e4e7; color-scheme: light; }
+      @media (prefers-color-scheme: dark) {
+        :root { --bg: #18181b; --fg: #f4f4f5; --muted: #a1a1aa; --line: #2e2e33; color-scheme: dark; }
+      }
+      body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+      main { max-width: 680px; margin: 64px auto; padding: 0 16px; }
+      h1 { font-size: 28px; margin: 0 0 8px; }
+      p { color: var(--muted); margin: 0 0 32px; }
+      a { color: inherit; }
+      ul { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
+      li { padding: 16px 0; border-bottom: 1px solid var(--line); }
+      li a { font-weight: 600; text-decoration: none; }
+      li span { display: block; color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Revise SDK examples</h1>
+      <p>
+        Live demos of the <a href="https://revise.io/sdk">Revise SDK</a>.
+        Source and two more examples on
+        <a href="https://github.com/reviseio/examples">GitHub</a>.
+      </p>
+      <ul>
+        <li><a href="docx-roundtrip/">Word in, Word out →</a><span>Open a .docx, edit it, download .docx or PDF. Autosaves to IndexedDB.</span></li>
+        <li><a href="custom-toolbar/">Bring your own UI →</a><span>No ribbon: your own toolbar, colors, and fonts around the page.</span></li>
+        <li><a href="ai-redline/">Your model, tracked changes →</a><span>Claude edits the document as tracked changes you review. Bring your own API key.</span></li>
+        <li><a href="review-portal/">Roles and comments →</a><span>Editor, suggester, and viewer roles with a custom review panel.</span></li>
+      </ul>
+    </main>
+  </body>
+</html>

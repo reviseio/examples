@@ -1,0 +1,125 @@
+:root {
+  --bg: #efe9df;
+  --fg: #2b2620;
+  --muted: #8a7f70;
+  --line: #ddd3c3;
+  --hover: #e5dccd;
+  --pressed: #d8ccb8;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151412;
+    --fg: #ece6dc;
+    --muted: #8c8377;
+    --line: #2c2925;
+    --hover: #24221e;
+    --pressed: #33302a;
+    color-scheme: dark;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  width: min(760px, 100% - 32px);
+  margin: 16px auto 0;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.toolbar button,
+.toolbar select {
+  font: inherit;
+  color: var(--fg);
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  min-width: 32px;
+  height: 30px;
+  padding: 0 8px;
+  cursor: pointer;
+}
+
+.toolbar button {
+  display: inline-grid;
+  place-items: center;
+}
+
+.toolbar button:hover:not(:disabled),
+.toolbar select:hover:not(:disabled) {
+  background: var(--hover);
+}
+
+.toolbar button[aria-pressed="true"] {
+  background: var(--pressed);
+}
+
+.toolbar button:disabled,
+.toolbar select:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.divider {
+  width: 1px;
+  height: 18px;
+  margin: 0 6px;
+  background: var(--line);
+}
+
+.spacer {
+  flex: 1;
+}
+
+.title {
+  display: block;
+  width: min(760px, 100% - 32px);
+  margin: 20px auto 0;
+  padding: 0 4px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: 13px/1.4 system-ui, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  outline: none;
+}
+
+main {
+  flex: 1;
+  min-height: 0;
+}
+
+footer {
+  padding: 8px 16px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+}

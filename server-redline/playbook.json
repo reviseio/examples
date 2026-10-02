@@ -1,0 +1,29 @@
+{
+  "edits": [
+    {
+      "find": "sole discretion",
+      "replace": "reasonable discretion",
+      "comment": "Our standard: discretion must be reasonable."
+    },
+    {
+      "find": "five (5) years",
+      "replace": "two (2) years",
+      "comment": "We cap confidentiality terms at two years."
+    },
+    {
+      "find": "State of Delaware",
+      "replace": "State of New York",
+      "comment": "Our standard governing law is New York."
+    },
+    {
+      "find": "courts located in Delaware",
+      "replace": "courts located in New York County, New York"
+    }
+  ],
+  "flags": [
+    {
+      "text": "neither party will solicit for employment",
+      "comment": "Non-solicits need sign-off from HR before we agree to them."
+    }
+  ]
+}
