@@ -94,6 +94,6 @@ A real proxy would also authenticate your users and rate-limit them.
 
 ## Learn more
 
-- [Tools for your agent](https://developer.revise.io/editor-sdk/guides/agent-tools)
-- [Tracked changes](https://developer.revise.io/editor-sdk/guides/tracked-changes)
-- [Agent tool reference](https://developer.revise.io/editor-sdk/api/agent-tools)
+- [Tools for your agent](https://revise.io/developer/docs/editor-sdk/guides/agent-tools)
+- [Tracked changes](https://revise.io/developer/docs/editor-sdk/guides/tracked-changes)
+- [Agent tool reference](https://revise.io/developer/docs/editor-sdk/api/agent-tools)

@@ -8,6 +8,6 @@ export default defineConfig({
   // Yjs identifies its own types with `instanceof`, so this app and the SDK
   // must load the same copy. Keep them on the same side of the optimizer.
   resolve: { dedupe: ["yjs", "y-protocols"] },
-  optimizeDeps: { exclude: ["revise", "yjs", "y-protocols"] },
+  optimizeDeps: { exclude: ["@reviseio/editor", "yjs", "y-protocols"] },
   build: { chunkSizeWarningLimit: 4000 },
 });

@@ -12,7 +12,7 @@ import {
   createServerDocumentSession,
   fileToYDoc,
   ydocToDocx,
-} from "revise/server";
+} from "@reviseio/editor/server";
 
 interface Playbook {
   edits: { find: string; replace: string; comment?: string }[];

@@ -54,7 +54,7 @@ empty, editable page before the room arrives. The roster comes from
 `editor.collaboration.subscribe()`, with the same colors the carets use.
 
 The server creates each room ([`server.ts`](server.ts)) with
-`revise/server`:
+`@reviseio/editor/server`:
 
 ```ts
 Server.configure({
@@ -84,6 +84,6 @@ the first one in seed the room (`seed: "if-empty"`, the default).
 
 ## Learn more
 
-- [Collaboration guide](https://developer.revise.io/editor-sdk/guides/collaboration)
-- [Backend reference (`revise/server`)](https://developer.revise.io/editor-sdk/api/backend)
-- [Roles and permissions](https://developer.revise.io/editor-sdk/guides/roles)
+- [Collaboration guide](https://revise.io/developer/docs/editor-sdk/guides/collaboration)
+- [Backend reference (`@reviseio/editor/server`)](https://revise.io/developer/docs/editor-sdk/api/backend)
+- [Roles and permissions](https://revise.io/developer/docs/editor-sdk/guides/roles)

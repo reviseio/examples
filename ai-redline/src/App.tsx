@@ -1,7 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { useEffect, useRef, useState } from "react";
-import ReviseEditor, { type ReviseEditorHandle } from "revise/editor";
-import "revise/style.css";
+import ReviseEditor, { type ReviseEditorHandle } from "@reviseio/editor";
+import "@reviseio/editor/style.css";
 import { runAgent, type AgentEvent } from "./agent";
 import ndaUrl from "./nda.docx?url";
 import { useColorScheme } from "./useColorScheme";

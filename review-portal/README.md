@@ -85,6 +85,6 @@ writes the role does not allow.
 
 ## Learn more
 
-- [Roles and permissions](https://developer.revise.io/editor-sdk/guides/roles)
-- [Comments](https://developer.revise.io/editor-sdk/guides/comments)
-- [Tracked changes](https://developer.revise.io/editor-sdk/guides/tracked-changes)
+- [Roles and permissions](https://revise.io/developer/docs/editor-sdk/guides/roles)
+- [Comments](https://revise.io/developer/docs/editor-sdk/guides/comments)
+- [Tracked changes](https://revise.io/developer/docs/editor-sdk/guides/tracked-changes)

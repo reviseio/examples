@@ -53,6 +53,6 @@ to your own sync server doesn't change the editor code. See the
 
 ## Learn more
 
-- [Input formats and export](https://developer.revise.io/editor-sdk/guides/formats)
-- [Documents](https://developer.revise.io/editor-sdk/guides/documents)
-- [Collaboration and Yjs](https://developer.revise.io/editor-sdk/guides/collaboration)
+- [Input formats and export](https://revise.io/developer/docs/editor-sdk/guides/formats)
+- [Documents](https://revise.io/developer/docs/editor-sdk/guides/documents)
+- [Collaboration and Yjs](https://revise.io/developer/docs/editor-sdk/guides/collaboration)

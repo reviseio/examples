@@ -6,7 +6,7 @@ import {
   type ReviseReviewState,
   type ReviseSelectionCapture,
   type ReviseTrackedChange,
-} from "revise/editor";
+} from "@reviseio/editor";
 
 function verb(change: ReviseTrackedChange): string {
   if (change.kind === "move") return "moved";

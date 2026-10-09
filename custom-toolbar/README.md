@@ -62,6 +62,6 @@ the document. Markdown and HTML sources open in the editor's default font.
 
 ## Docs
 
-- [Chrome and toolbars](https://developer.revise.io/editor-sdk/guides/chrome)
-- [Appearance: theme, colors, fonts](https://developer.revise.io/editor-sdk/guides/appearance)
-- [`ReviseEditorHandle`](https://developer.revise.io/editor-sdk/api/handle)
+- [Chrome and toolbars](https://revise.io/developer/docs/editor-sdk/guides/chrome)
+- [Appearance: theme, colors, fonts](https://revise.io/developer/docs/editor-sdk/guides/appearance)
+- [`ReviseEditorHandle`](https://revise.io/developer/docs/editor-sdk/api/handle)

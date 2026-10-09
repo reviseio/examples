@@ -27,7 +27,7 @@ playbook.json`.
 
 ## Key code
 
-The browser editor and `revise/server` share one tool contract, so this is
+The browser editor and `@reviseio/editor/server` share one tool contract, so this is
 the same code an agent would run in the browser ([`redline.ts`](redline.ts)):
 
 ```ts
@@ -48,7 +48,7 @@ await session.tools.call("replace", {
 await writeFile(output, await ydocToDocx(ydoc));
 ```
 
-`revise/server` needs `jsdom` (the converters parse XML with DOM APIs) and
+`@reviseio/editor/server` needs `jsdom` (the converters parse XML with DOM APIs) and
 Node 18 or newer.
 
 ## Where to take it
@@ -59,10 +59,10 @@ Node 18 or newer.
 - Edit a live document: bind a session to the `Y.Doc` your collaboration
   server already holds, and the tracked changes show up in every open
   browser. See the [`multiplayer`](../multiplayer) example and the
-  [collaboration guide](https://developer.revise.io/editor-sdk/guides/collaboration#server-editing).
+  [collaboration guide](https://revise.io/developer/docs/editor-sdk/guides/collaboration#server-editing).
 
 ## Learn more
 
-- [Backend reference](https://developer.revise.io/editor-sdk/api/backend)
-- [Agent tool reference](https://developer.revise.io/editor-sdk/api/agent-tools)
-- [Tracked changes](https://developer.revise.io/editor-sdk/guides/tracked-changes)
+- [Backend reference](https://revise.io/developer/docs/editor-sdk/api/backend)
+- [Agent tool reference](https://revise.io/developer/docs/editor-sdk/api/agent-tools)
+- [Tracked changes](https://revise.io/developer/docs/editor-sdk/guides/tracked-changes)
