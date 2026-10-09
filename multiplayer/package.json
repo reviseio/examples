@@ -11,10 +11,10 @@
   "dependencies": {
     "@hocuspocus/provider": "^2.15.0",
     "@hocuspocus/server": "^2.15.0",
-    "jsdom": "^24.1.3",
+    "@reviseio/editor": "3.1.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "@reviseio/editor": "2.3.2",
+    "revise": "3.1.7",
     "y-protocols": "^1.0.6",
     "yjs": "^13.6.0"
   },

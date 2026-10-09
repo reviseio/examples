@@ -7,14 +7,17 @@
  */
 import { readFile } from "node:fs/promises";
 import { Server } from "@hocuspocus/server";
-import { seedYDocFromFile } from "@reviseio/editor/server";
+import { seedYDoc } from "revise";
 
-const proposal = await readFile(new URL("./proposal.md", import.meta.url));
+const proposal = {
+  bytes: await readFile(new URL("./proposal.md", import.meta.url)),
+  filename: "proposal.md",
+};
 
 Server.configure({
   port: 1234,
   async onLoadDocument({ document }) {
     // Writes only into an empty room, so this is safe on every load.
-    await seedYDocFromFile(document, proposal, "proposal.md");
+    await seedYDoc(document, proposal);
   },
 }).listen();

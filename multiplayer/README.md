@@ -54,16 +54,24 @@ empty, editable page before the room arrives. The roster comes from
 `editor.collaboration.subscribe()`, with the same colors the carets use.
 
 The server creates each room ([`server.ts`](server.ts)) with
-`@reviseio/editor/server`:
+[`revise`](https://www.npmjs.com/package/revise):
 
 ```ts
+import { seedYDoc } from "revise";
+
 Server.configure({
   port: 1234,
   async onLoadDocument({ document }) {
-    await seedYDocFromFile(document, proposal, "proposal.md");
+    // Writes only into an empty room, so this is safe on every load.
+    await seedYDoc(document, proposal);
   },
 }).listen();
 ```
+
+If two peers do seed an empty room before syncing, `seedYDoc` repairs it to
+one copy. A Word file is stored in the room as well, so
+`ReviseDocument.fromYDoc(document)` can later export it with untouched
+content byte for byte.
 
 Seeding on the server means two people opening a new room at the same moment
 can never both import the document, which is why clients pass
@@ -85,5 +93,5 @@ the first one in seed the room (`seed: "if-empty"`, the default).
 ## Learn more
 
 - [Collaboration guide](https://revise.io/developer/docs/editor-sdk/guides/collaboration)
-- [Backend reference (`@reviseio/editor/server`)](https://revise.io/developer/docs/editor-sdk/api/backend)
+- [`revise` documentation](https://revise.io/developer/docs/revise/introduction)
 - [Roles and permissions](https://revise.io/developer/docs/editor-sdk/guides/roles)

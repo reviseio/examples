@@ -27,42 +27,48 @@ playbook.json`.
 
 ## Key code
 
-The browser editor and `@reviseio/editor/server` share one tool contract, so this is
-the same code an agent would run in the browser ([`redline.ts`](redline.ts)):
+[`revise`](https://www.npmjs.com/package/revise) runs the same editing tools
+as the browser editor and its agent, so this is the same code an agent would
+run ([`redline.ts`](redline.ts)):
 
 ```ts
-const ydoc = await fileToYDoc(await readFile(input), basename(input));
-const session = await createServerDocumentSession(ydoc, {
-  documentId: "contract",
-}); // suggesting mode by default: every edit is a tracked change
+import { ReviseDocument } from "revise";
 
-const search = await session.tools.call("search_document", {
+// Word files open in suggesting mode: every edit is a tracked change.
+const doc = await ReviseDocument.open(input, { author: "Playbook" });
+
+const search = await doc.tools.call("search_document", {
   queries: [find],
   page: 0,
 });
-await session.tools.call("replace", {
-  search_result_id: search.data.search_result_id,
-  replacements: [{ find, replace, comment, occurrence: "all" }],
-});
+if (search.ok) {
+  await doc.tools.call("replace", {
+    search_result_id: search.value.data.search_result_id,
+    replacements: [{ find, replace, comment, occurrence: "all" }],
+  });
+}
 
-await writeFile(output, await ydocToDocx(ydoc));
+const { bytes } = await doc.export({ format: "docx" });
+await writeFile(output, bytes);
 ```
 
-`@reviseio/editor/server` needs `jsdom` (the converters parse XML with DOM APIs) and
-Node 18 or newer.
+Tool calls never throw for a bad edit: they return `{ ok: false, error }`.
+Node 20 or newer.
 
 ## Where to take it
 
-- Put a model in the loop: give it `session.tools.getDefinitions()` and run
-  its tool calls with `session.tools.executeDynamic()`. The
+- Put a model in the loop: `agentTools(doc, { provider: "anthropic" })`
+  gives you the tool definitions and a handler for the model's tool calls,
+  in the Anthropic or OpenAI SDK's shapes. The
   [`ai-redline`](../ai-redline) example does this in the browser.
-- Edit a live document: bind a session to the `Y.Doc` your collaboration
-  server already holds, and the tracked changes show up in every open
-  browser. See the [`multiplayer`](../multiplayer) example and the
-  [collaboration guide](https://revise.io/developer/docs/editor-sdk/guides/collaboration#server-editing).
+- Edit a live document: `ReviseDocument.fromYDoc(room)` works on the `Y.Doc`
+  your collaboration server already holds, and the tracked changes show up
+  in every open browser. See the [`multiplayer`](../multiplayer) example.
+- Skip the code: `npx revise replace-text contract.docx "five (5) years" "two
+  (2) years"` does the same from the command line.
 
 ## Learn more
 
-- [Backend reference](https://revise.io/developer/docs/editor-sdk/api/backend)
+- [`revise` documentation](https://revise.io/developer/docs/revise/introduction)
 - [Agent tool reference](https://revise.io/developer/docs/editor-sdk/api/agent-tools)
 - [Tracked changes](https://revise.io/developer/docs/editor-sdk/guides/tracked-changes)
