@@ -1,5 +1,7 @@
 # Word in, Word out
 
+[Live demo](https://reviseio.github.io/examples/docx-roundtrip/)
+
 Open a `.docx`, edit it, and download it as `.docx` or PDF. Comments and
 tracked changes survive the round trip. Every change is saved to IndexedDB
 as you type, so the document is still there after a reload.

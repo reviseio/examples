@@ -1,5 +1,7 @@
 # AI redline: your model, tracked changes
 
+[Live demo](https://reviseio.github.io/examples/ai-redline/)
+
 Ask Claude to edit a contract. Claude works through the editor's own document
 tools, and every edit lands as a tracked change you accept or reject inline,
 the same way you'd review a colleague's redline in Word.

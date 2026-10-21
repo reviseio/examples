@@ -1,5 +1,7 @@
 # Review portal: roles and comments
 
+[Live demo](https://reviseio.github.io/examples/review-portal/)
+
 One contract, three people with different permissions. Switch persona in the
 header:
 

@@ -1,5 +1,7 @@
 # Bring your own UI
 
+[Live demo](https://reviseio.github.io/examples/custom-toolbar/)
+
 A distraction-free writing app that doesn't look like Revise. The built-in
 ribbon and title bar are turned off. A small toolbar of plain React buttons
 drives the editor through its handle, the page colors and typeface come from
