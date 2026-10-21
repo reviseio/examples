@@ -2,8 +2,8 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import ReviseEditor, {
   type ReviseEditorHandle,
   type RevisePeer,
-} from "@reviseio/editor";
-import "@reviseio/editor/style.css";
+} from "revise";
+import "revise/style.css";
 import { HocuspocusProvider } from "@hocuspocus/provider";
 import { useColorScheme } from "./useColorScheme";
 

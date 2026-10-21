@@ -3,8 +3,8 @@ import ReviseEditor, {
   rolePolicy,
   type ReviseDocumentRole,
   type ReviseEditorHandle,
-} from "@reviseio/editor";
-import "@reviseio/editor/style.css";
+} from "revise";
+import "revise/style.css";
 import ReviewSidebar from "./ReviewSidebar";
 import ndaUrl from "./nda.docx?url";
 import { useColorScheme } from "./useColorScheme";

@@ -1,5 +1,5 @@
 import Anthropic from "@anthropic-ai/sdk";
-import type { ReviseEditorHandle } from "@reviseio/editor";
+import type { ReviseEditorHandle } from "revise";
 
 export type AgentEvent =
   | { type: "text"; text: string }

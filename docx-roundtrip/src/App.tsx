@@ -2,8 +2,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import ReviseEditor, {
   createEmptyDocx,
   type ReviseEditorHandle,
-} from "@reviseio/editor";
-import "@reviseio/editor/style.css";
+} from "revise";
+import "revise/style.css";
 import { IndexeddbPersistence } from "y-indexeddb";
 import sampleUrl from "./sample.docx?url";
 import { useColorScheme } from "./useColorScheme";

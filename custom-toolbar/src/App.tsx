@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import ReviseEditor, {
   type ReviseEditorHandle,
   type ReviseToolbarState,
-} from "@reviseio/editor";
-import "@reviseio/editor/style.css";
+} from "revise";
+import "revise/style.css";
 import essayUrl from "./essay.docx?url";
 import { BulletsIcon, LinkIcon, NumbersIcon, RedoIcon, UndoIcon } from "./icons";
 
