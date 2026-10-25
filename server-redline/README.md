@@ -27,12 +27,12 @@ playbook.json`.
 
 ## Key code
 
-[`@reviseio/cli`](https://www.npmjs.com/package/@reviseio/cli) runs the same editing tools
+[`revise/server`](https://revise.io/developer/docs/editor-sdk/api/backend) runs the same editing tools
 as the browser editor and its agent, so this is the same code an agent would
 run ([`redline.ts`](redline.ts)):
 
 ```ts
-import { ReviseDocument } from "@reviseio/cli";
+import { ReviseDocument } from "revise/server";
 
 // Word files open in suggesting mode: every edit is a tracked change.
 const doc = await ReviseDocument.open(input, { author: "Playbook" });
@@ -64,11 +64,9 @@ Node 20 or newer.
 - Edit a live document: `ReviseDocument.fromYDoc(room)` works on the `Y.Doc`
   your collaboration server already holds, and the tracked changes show up
   in every open browser. See the [`multiplayer`](../multiplayer) example.
-- Skip the code: `npx @reviseio/cli replace-text contract.docx "five (5) years" "two
-  (2) years"` does the same from the command line.
 
 ## Learn more
 
-- [CLI and library documentation](https://revise.io/developer/docs/revise/introduction)
+- [Server API documentation](https://revise.io/developer/docs/editor-sdk/api/backend)
 - [Agent tool reference](https://revise.io/developer/docs/editor-sdk/api/agent-tools)
 - [Tracked changes](https://revise.io/developer/docs/editor-sdk/guides/tracked-changes)

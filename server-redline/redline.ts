@@ -8,7 +8,7 @@
  */
 import { readFile, writeFile } from "node:fs/promises";
 import { basename, extname } from "node:path";
-import { ReviseDocument } from "@reviseio/cli";
+import { ReviseDocument } from "revise/server";
 
 interface Playbook {
   edits: { find: string; replace: string; comment?: string }[];

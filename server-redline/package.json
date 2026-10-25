@@ -7,7 +7,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@reviseio/cli": "4.2.0",
+    "revise": "4.3.0",
     "yjs": "^13.6.0"
   },
   "devDependencies": {

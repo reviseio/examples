@@ -7,7 +7,7 @@
  */
 import { readFile } from "node:fs/promises";
 import { Server } from "@hocuspocus/server";
-import { seedYDoc } from "@reviseio/cli";
+import { seedYDoc } from "revise/server";
 
 const proposal = {
   bytes: await readFile(new URL("./proposal.md", import.meta.url)),
